@@ -1,0 +1,2 @@
+class TiTle < ApplicationRecord
+end

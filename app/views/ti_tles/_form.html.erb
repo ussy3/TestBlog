@@ -1,0 +1,27 @@
+<%= form_for(ti_tle) do |f| %>
+  <% if ti_tle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ti_tle.errors.count, "error") %> prohibited this ti_tle from being saved:</h2>
+
+      <ul>
+      <% ti_tle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :message %>
+    <%= f.text_field :message %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

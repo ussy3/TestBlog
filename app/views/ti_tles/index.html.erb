@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ti Tles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ti_tles.each do |ti_tle| %>
+      <tr>
+        <td><%= ti_tle.title %></td>
+        <td><%= ti_tle.message %></td>
+        <td><%= link_to 'Show', ti_tle %></td>
+        <td><%= link_to 'Edit', edit_ti_tle_path(ti_tle) %></td>
+        <td><%= link_to 'Destroy', ti_tle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ti Tle', new_ti_tle_path %>
