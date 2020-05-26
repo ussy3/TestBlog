@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :blogs
   resources :tops
   #root 'messages#index'
   resources :ti_tles
